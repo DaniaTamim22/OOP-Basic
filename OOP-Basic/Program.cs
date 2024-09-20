@@ -5,7 +5,10 @@ namespace OOP_Basic
     {
         static void Main(string[] args)
         {
-            FirstPart();
+           // FirstPart();
+
+            Vehicle v= new Vehicle("Volvo");
+            Car c = new Car("Saab", "97");
 
         }
 
