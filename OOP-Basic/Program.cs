@@ -9,7 +9,11 @@ namespace OOP_Basic
 
             Vehicle v= new Vehicle("Volvo");
             Car c = new Car("Saab", "97");
+            Saab s= new Saab();
 
+            Console.WriteLine(v.Drive(50));
+            Console.WriteLine(c.Drive(55));
+            Console.WriteLine(s.Drive(50));
         }
 
         private static void FirstPart()
