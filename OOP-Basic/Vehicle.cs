@@ -27,9 +27,9 @@ namespace OOP_Basic
             Brand = brand;
         }
 
-        public string Drive(int distance)
+        public virtual string Drive(int distance)
         {
-            return $"{GetType().Name}Vehicle drove for {distance}";
+            return $"{GetType().Name} Vehicle drove for {distance}";
         }
     }
 
@@ -42,6 +42,10 @@ namespace OOP_Basic
             Model = model;
         }
 
+        public override string Drive(int distance)
+        {
+            return $"{base.Drive(distance)} from Car ";
+        }
         public void Stop()
         {
             // Do Somthing
@@ -52,7 +56,7 @@ namespace OOP_Basic
 
     internal class Saab : Car
     {
-        public Saab(string model = "93") : base("Saab", model)
+        public Saab(string model = "900") : base("Saab", model)
         {
 
 

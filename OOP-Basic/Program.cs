@@ -5,17 +5,38 @@ namespace OOP_Basic
     {
         static void Main(string[] args)
         {
-           // FirstPart();
+            // FirstPart();
 
-            Vehicle v= new Vehicle("Volvo");
+            Vehicle v = new Vehicle("Volvo");
             Car c = new Car("Saab", "97");
-            Saab s= new Saab();
+            Saab s = new Saab();
 
-            Console.WriteLine(v.Drive(50));
-            Console.WriteLine(c.Drive(55));
-            Console.WriteLine(s.Drive(50));
+            //Console.WriteLine(v.Drive(50));
+            //Console.WriteLine(c.Drive(55));
+            //Console.WriteLine(s.Drive(50));
+
+            //Console.WriteLine(s.Brand);
+            //Console.WriteLine(s.Model);
+
+            List<IDrivable> vehicles = new List<IDrivable>() { v, c, s };
+
+            foreach (IDrivable vehicle in vehicles)
+            {
+                Console.WriteLine(vehicle.Drive(50));
+
+                //Saab saab= vehicle as Saab;
+                //if (saab != null)
+                //{
+                //    Console.WriteLine(saab.SaabSpecialMethod());
+                //}
+
+                if (vehicle is Saab)
+                {
+                    Saab saab = (Saab)vehicle;
+                    Console.WriteLine(saab.SaabSpecialMethod());
+                }
+            }
         }
-
         private static void FirstPart()
         {
             Person p = new Person();
