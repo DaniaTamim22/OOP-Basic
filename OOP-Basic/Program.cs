@@ -30,10 +30,16 @@ namespace OOP_Basic
                 //    Console.WriteLine(saab.SaabSpecialMethod());
                 //}
 
-                if (vehicle is Saab)
+                //if (vehicle is Saab)
+                //{
+                //    Saab saab = (Saab)vehicle;
+                //    Console.WriteLine(saab.SaabSpecialMethod());
+                //}
+
+                if (vehicle is Saab castedToSaab)
                 {
-                    Saab saab = (Saab)vehicle;
-                    Console.WriteLine(saab.SaabSpecialMethod());
+                    // It is going to procceed here """""" just if vehicle is Saab """""
+                    Console.WriteLine(castedToSaab.SaabSpecialMethod());
                 }
             }
         }
